@@ -2,8 +2,8 @@
 $(function() {
 	setInterval(function() {
 		let STATES = {
-			Operational: "Idle",
-			Printing: "Printing"
+			Operational: "Standby",
+			Printing: "Druckt"
 		};
 		$.ajax("/api/job", {
 			success: (data, text, xhr) => {
