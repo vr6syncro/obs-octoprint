@@ -66,3 +66,7 @@ pm2 start nodemon www
 pm2 startup
 sudo env PATH=$PATH:/usr/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
 ```
+For status
+```
+pm2 status
+```
