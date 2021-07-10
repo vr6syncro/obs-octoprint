@@ -47,3 +47,22 @@ $ npm install
 $ npm start
 ```
 - Open a browser to http://localhost:3000/overlay/info
+
+
+### Autostart
+```
+cd /obs-octoprint/bin
+```
+Nodemon for monitoring for file changes and restart
+```
+npm i nodemon
+```
+
+pm2 for autostart see: https://pm2.keymetrics.io/docs/usage/quick-start/
+
+```
+npm install pm2@latest -g
+pm2 start nodemon www
+pm2 startup
+sudo env PATH=$PATH:/usr/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
+```
